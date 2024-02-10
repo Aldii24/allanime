@@ -1,11 +1,4 @@
-const Pagination = ({ page, lastPage, setPage }) => {
-  const scrollTop = () => {
-    scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
+const PaginationSearch = ({ page, lastPage, setPage }) => {
   const handleNextPage = () => {
     setPage((nextpage) => nextpage + 1);
     scrollTop();
@@ -16,13 +9,20 @@ const Pagination = ({ page, lastPage, setPage }) => {
     scrollTop();
   };
 
+  const scrollTop = () => {
+    scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <div className="p-8">
         <div className="flex justify-center gap-8 items-center">
           {page > 1 ? (
             <button
-              className="p-1 w-20 bg-indigo-500 rounded font-bold text-white hover:text-black transition-all"
+              className="p-1 w-20 bg-indigo-500 rounded font-bold hover:text-white transition-all"
               onClick={handlePrevPage}
             >
               Prev
@@ -34,7 +34,7 @@ const Pagination = ({ page, lastPage, setPage }) => {
           </p>
           {page >= lastPage ? null : (
             <button
-              className="p-1 w-20 bg-indigo-500 rounded font-bold text-white hover:text-black transition-all"
+              className="p-1 w-20 bg-indigo-500 rounded font-bold hover:text-white transition-all"
               onClick={handleNextPage}
             >
               Next
@@ -46,4 +46,4 @@ const Pagination = ({ page, lastPage, setPage }) => {
   );
 };
 
-export default Pagination;
+export default PaginationSearch;

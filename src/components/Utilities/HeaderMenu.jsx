@@ -16,7 +16,7 @@ const HeaderMenu = ({ title }) => {
         </div>
         <ArrowDown
           size={30}
-          className="p-2 md:w-10 absolute top-32 end-8 bg-amber-500 rounded cursor-pointer"
+          className="p-2 text-white md:w-10 absolute top-28 end-8 bg-indigo-500 rounded cursor-pointer hover:text-black transition-all"
           onClick={scrollDown}
         />
       </div>
