@@ -15,6 +15,9 @@ const VideoPlayer = ({ youtubeId }) => {
           onReady={(event) => event.target.pauseVideo()}
           videoId={youtubeId}
           opts={option}
+          onError={() => {
+            alert("trailernya lagi rusak bro hehe...")
+          }}
         />
       </div>
     </>

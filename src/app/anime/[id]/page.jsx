@@ -37,6 +37,9 @@ const Page = async ({ params: { id } }) => {
             </div>
           </div>
           <div>
+            <h3 className="text-indigo-500 text-3xl md:hidden mb-2 font-bold">
+              TRAILER
+            </h3>
             <VideoPlayer youtubeId={anime.data.trailer.youtube_id} />
           </div>
         </div>

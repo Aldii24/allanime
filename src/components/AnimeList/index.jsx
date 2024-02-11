@@ -8,22 +8,39 @@ const AnimeList = ({ api }) => {
         <div className="grid md:grid-cols-5 sm:grid-cols-4 grid-cols-2 md:gap-7 gap-4">
           {api.data?.map((anime) => {
             return (
-              <Link
-                className="hover:border-2 hover:bg-indigo-500 border-indigo-500 transition-all rounded"
-                href={`/anime/${anime.mal_id}`}
-              >
-                <Image
-                  className="rounded"
-                  src={anime.images.webp.image_url}
-                  alt="anime"
-                  width={200}
-                  height={200}
-                  priority={true}
-                />
-                <h3 className="font-bold md:text-xl text-md text-white text-center hover:text-black transition-all mt-4">
-                  {anime.title}
-                </h3>
-              </Link>
+              <div className="border shadow-indigo-500 shadow-lg hover:bg-indigo-500 border-white transition-all rounded">
+                <Link href={`/anime/${anime.mal_id}`} key={anime.mal_id}>
+                  <Image
+                    className="rounded"
+                    src={anime.images.webp.image_url}
+                    alt="anime"
+                    width={200}
+                    height={200}
+                    priority={true}
+                  />
+                  <h3 className="font-bold md:text-xl text-md border-b text-white text-center hover:text-black transition-all mt-4">
+                    {anime.title}
+                  </h3>
+                </Link>
+                <div className="px-4 mt-2 mb-2 flex justify-between">
+                  <p className="text-white">
+                    type : <span className="text-amber-500">{anime.type}</span>
+                  </p>
+                  <p className="text-white">
+                    score :{" "}
+                    <span className="text-amber-500">{anime.score}</span>
+                  </p>
+                </div>
+                <div className="px-4 mt-2 mb-2 flex justify-between">
+                  <p className="text-white">
+                    rank : <span className="text-amber-500">{anime.rank}</span>
+                  </p>
+                  <p className="text-white">
+                    source :{" "}
+                    <span className="text-amber-500">{anime.source}</span>
+                  </p>
+                </div>
+              </div>
             );
           })}
         </div>
