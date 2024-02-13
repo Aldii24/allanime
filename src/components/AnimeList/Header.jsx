@@ -8,7 +8,7 @@ const Header = ({ title, linkTitle, linkHref }) => {
           <h3 className="font-bold text-white md:text-2xl text-xl">{title}</h3>
           {linkHref && linkTitle ? (
             <Link href={linkHref}>
-              <p className="font-bold text-white hover:text-indigo-500 underline transition-all">
+              <p className="font-bold text-white hover:text-red-900 underline transition-all">
                 {linkTitle}
               </p>
             </Link>
