@@ -28,7 +28,7 @@ const InputSearch = () => {
         />
         <MagnifyingGlass
           size={25}
-          className="absolute top-1.5 end-2.5 text-black cursor-pointer"
+          className="absolute top-1.5 end-2.5 hover:text-red-900 text-black cursor-pointer"
           onClick={handleInputSearch}
         />
       </div>

@@ -8,7 +8,7 @@ const AnimeList = ({ api }) => {
         <div className="grid md:grid-cols-5 sm:grid-cols-4 grid-cols-2 md:gap-7 gap-4">
           {api.data?.map((anime) => {
             return (
-              <div className="border md:shadow-[4px_4px_20px_5px_#0B60B0] shadow-[1px_1px_10px_2px_#0B60B0] hover:bg-indigo-500 border-white transition-all rounded">
+              <div className="border shadow-[4px_4px_10px_1px_#e53e3e] hover:bg-red-900 border-white transition-all rounded">
                 <Link href={`/anime/${anime.mal_id}`} key={anime.mal_id}>
                   <Image
                     className="rounded"

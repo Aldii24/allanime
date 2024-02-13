@@ -22,7 +22,7 @@ const PaginationSearch = ({ page, lastPage, setPage }) => {
         <div className="flex justify-center gap-8 items-center">
           {page > 1 ? (
             <button
-              className="p-1 w-20 bg-indigo-500 rounded font-bold hover:text-white transition-all"
+              className="p-1 w-20 bg-red-900 rounded font-bold hover:text-white transition-all"
               onClick={handlePrevPage}
             >
               Prev
@@ -34,7 +34,7 @@ const PaginationSearch = ({ page, lastPage, setPage }) => {
           </p>
           {page >= lastPage ? null : (
             <button
-              className="p-1 w-20 bg-indigo-500 rounded font-bold hover:text-white transition-all"
+              className="p-1 w-20 bg-red-900 rounded font-bold hover:text-white transition-all"
               onClick={handleNextPage}
             >
               Next

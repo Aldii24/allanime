@@ -12,7 +12,7 @@ const Page = async ({ params: { id } }) => {
       <div className="p-4 mt-8">
         <div className="flex md:flex-row sm:flex-col flex-col gap-10">
           <div className="flex flex-col">
-            <div className="flex flex-col items-center w-full h-96 rounded-3xl bg-indigo-800">
+            <div className="flex flex-col items-center w-full h-96 rounded-3xl bg-red-900">
               <Image
                 className="md:w-80 rounded-3xl w-full"
                 src={anime.data.images.webp.image_url}
@@ -32,12 +32,12 @@ const Page = async ({ params: { id } }) => {
               <div></div>
             </div>
             <div className="mt-10">
-              <h3 className="text-indigo-500 text-3xl font-bold">SYNOPSYS</h3>
+              <h3 className="text-red-900 text-3xl font-bold">SYNOPSYS</h3>
               <p className="text-white text-justify">{anime.data.synopsis}</p>
             </div>
           </div>
           <div>
-            <h3 className="text-indigo-500 text-3xl md:hidden mb-2 font-bold">
+            <h3 className="text-red-900 text-3xl md:hidden mb-2 font-bold">
               TRAILER
             </h3>
             <VideoPlayer youtubeId={anime.data.trailer.youtube_id} />
